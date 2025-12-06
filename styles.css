@@ -1,0 +1,840 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* end of reset */
+
+/* start of my code */
+
+/* universal styles */
+
+/* base styles */
+:root {
+    --white: white;
+    --pink: #f80f5c;
+}
+
+html {
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+/* body styles */
+
+body {
+    background-color: var(--pink);
+}
+
+main {
+    background-color: var(--white);
+    border: 3px black solid;
+    margin: -3px auto 0 auto;
+}
+
+/* header styles */
+
+#headerButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+#headerButtons li:nth-of-type(2) {
+    margin: 0 -3px;
+}
+
+#headerButtons li a {
+    color: var(--pink);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--white);
+    padding: 10px 20px;
+    border: solid 3px black;
+    transition: all 0.3s;
+}
+
+
+/* header pseudo styles */
+
+#headerButtons li a:hover {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+#headerButtons li a:focus {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+#headerButtons li a:target {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+/* main content styles */
+
+h2 {
+    font-weight: bold;
+    color: black;
+}
+
+/* Portfolio Specific */
+
+.portfolio p {
+    text-align: left;
+    max-width: none;
+}
+
+/* Buttons */
+
+/* drop down buttons */
+.BigBoy,
+.SmallBoy {
+    background-color: white;
+    border: none;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: black solid 3px;
+    filter: drop-shadow(0px 2px 0px var(--pink));
+}
+
+.BigBoy {
+    font-size: 1.3em;
+    padding: 5px 0 5px 25px;
+    margin: 20px 0;
+}
+
+.SmallBoy {
+    font-size: 1.12em;
+    padding: 5px 0 5px 40px;
+    margin: 20px 0;
+}
+
+/* contact button */
+
+#contact button {
+    color: var(--pink);
+    background-color: var(--white);
+    border: 3px black solid;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+
+#contact button:hover {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+/* contact social a */
+
+#contact .social {
+    transition: all 0.2s;
+}
+
+#contact .social:hover {
+    filter: drop-shadow(3px 3px 0 var(--pink))
+}
+
+/* list elements */
+
+main ul {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+main li {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 300px;
+}
+
+/* gallery */
+
+h4 {
+    font-size: 1.2em;
+    margin: 15px 0 15px 50px;
+    font-weight: bold;
+}
+
+/* gallery styles */
+
+.gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+}
+
+#TAAFI img {
+    border: 3px solid black;
+}
+
+
+/* comparison styles */
+
+
+.comparison figure {
+    margin: 0 auto;
+}
+
+.comparison img {
+    max-width: 100%;
+    border-bottom: 0;
+}
+
+.comparison figure img {
+    padding: 10px 0;
+
+}
+
+.comparison figcaption {
+    text-align: left;
+    padding: 10px 20px 20px 0;
+    line-height: 1.15;
+    margin-left: -6%;
+}
+
+
+/* footer styles */
+
+footer {
+    text-align: center;
+    color: var(--white);
+}
+
+/* Portfolio Button Functionality */
+
+/* .portfolio {
+    display: none;
+}
+
+.projCon {
+    display: none;
+} */
+
+
+/* mobile styles */
+
+@media screen and (width <=550px) {
+
+    /* header styles */
+    /* nav styles */
+
+    nav {
+        min-width: 300px;
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* nav button styles */
+
+    img[src="images/Logo.png"] {
+        max-width: 100%;
+        margin: 15px auto;
+    }
+
+    #headerButtons {
+        margin: 0 auto;
+    }
+
+    #headerButtons li a {
+        font-size: 1.2em;
+    }
+
+    /* main styles */
+
+    main {
+        min-width: 350px;
+        max-width: 410px;
+        margin-top: 12px;
+    }
+
+    #about,
+    #contact {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #aboutT,
+    #contactT {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        max-width: 350px;
+        margin: 10px auto;
+    }
+
+    p {
+        max-width: 350px;
+        margin: 10px auto;
+        line-height: 1.2em;
+    }
+
+    /* about & contact img styles */
+
+    #about img,
+    #contact img {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    #socialink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact .social {
+        width: 75px;
+        padding: 0 10px;
+    }
+
+    /* Buttons */
+
+    /* idk man what bunnton is this again  */
+
+    #contact button {
+        color: var(--pink);
+        background-color: var(--white);
+        border: 3px black solid;
+        font-weight: bold;
+    }
+
+    /* Case study content */
+
+    .portfolio p {
+        text-align: left;
+        margin: 10px 0 10px 50px;
+    }
+
+    /* list elements */
+
+    main li {
+        margin-left: 65px;
+    }
+
+    /* gallery content */
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery figure {
+        width: 90%;
+        padding: 10px;
+    }
+
+    figcaption {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    /* comparison styles */
+
+    .comparison figcaption {
+        margin-left: 50px;
+    }
+
+    /* footer styles */
+
+    footer {
+        padding: 20px 0;
+    }
+
+}
+
+/* Medium Styles */
+
+@media screen and (width >=551px) and (width <=1000px) {
+
+    /* header styles */
+    /* nav styles */
+
+    nav {
+        min-width: 300px;
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* nav button styles */
+
+    img[src="images/Logo.png"] {
+        max-width: 100%;
+        margin: 15px auto;
+    }
+
+    #headerButtons {
+        margin: 0 auto;
+    }
+
+    #headerButtons li a {
+        font-size: 1.2em;
+    }
+
+    /* main styles */
+
+    main {
+        min-width: 400px;
+        max-width: 800px;
+        margin-top: 12px;
+    }
+
+    #about,
+    #contact {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #aboutT,
+    #contactT {
+        padding: 7%;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        max-width: 350px;
+        margin: 10px auto;
+    }
+
+    p {
+        max-width: 350px;
+        margin: 10px auto;
+        line-height: 1.2em;
+    }
+
+    /* about & contact img styles */
+
+    #about img,
+    #contact img {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    #contact img {
+        max-height: 450px;
+    }
+
+    #socialink {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact #socialink img {
+        width: 75px;
+        margin: 10px;
+    }
+
+    /* portfolio styles */
+
+    /* p styles */
+
+    .portfolio p {
+        text-align: left;
+        max-width: none;
+        width: 90%;
+    }
+
+    /* list elements */
+
+    main ul {
+        width: 90%;
+    }
+
+    main li {
+        margin: 0;
+    }
+
+    /* gallery */
+
+    h4 {
+        margin-left: 35px;
+    }
+
+    .gallery {
+        grid-gap: 10px;
+    }
+
+    figure {
+        width: 80%;
+        text-align: center;
+    }
+
+    figcaption {
+        padding: 10px 0;
+    }
+
+    .gallery img {
+        width: 250px;
+    }
+
+    #taafiFront img {
+        width: 200px;
+    }
+
+    /* footer styles */
+
+    footer {
+        padding: 20px 0;
+    }
+
+}
+
+/* Desktop Styles */
+
+@media screen and (width >=1001px) {
+
+    /* header styles */
+    /* nav styles */
+
+    /* nav button styles */
+
+    img[src="images/Logo.png"] {
+        width: 300px;
+        margin: 15px 0 15px 10%;
+    }
+
+    #headerButtons {
+        margin-left: 10%;
+    }
+
+    #headerButtons li a {
+        font-size: 1.2em;
+    }
+
+    /* main styles */
+
+    main {
+        min-width: 500px;
+        max-width: 79.5%;
+        margin-top: 13px;
+    }
+
+    #about,
+    #contact {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #aboutT,
+    #contactT {
+        padding: 7%;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        max-width: 350px;
+        margin: 10px auto;
+    }
+
+    p {
+        max-width: 350px;
+        margin: 10px auto;
+        line-height: 1.2em;
+    }
+
+    /* about & contact img styles */
+
+    #about img,
+    #contact img {
+        margin: 20px auto;
+        width: 90%;
+        max-width: 500px;
+    }
+
+    #socialink {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact #socialink img {
+        width: 75px;
+        margin: 10px;
+    }
+
+    /* social media buttons */
+
+    /* portfolio stuff */
+
+    /* Buttons */
+
+    .BigBoy {
+        padding-left: 17px;
+    }
+
+    .SmallBoy {
+        padding-left: 35px;
+    }
+
+    /* list items */
+
+    main ul {
+        width: 90%;
+    }
+
+    main li {
+        margin: 0;
+    }
+
+    /* the paragraph. */
+
+    .portfolio p {
+        width: 90%;
+    }
+
+    /* gallery */
+
+    h4 {
+        margin-left: 35px;
+    }
+
+    .gallery {
+        grid-gap: 10px;
+    }
+
+    figure {
+        width: 80%;
+        text-align: center;
+    }
+
+    figcaption {
+        padding: 10px 0;
+    }
+
+    .gallery img {
+        width: 350px;
+    }
+    
+    #taafiFront img {
+        width: 250px;
+    }
+
+    /* footer styles */
+
+    footer {
+        padding: 20px 0;
+    }
+
+}
+
+/* Stupid thicc Styles */
+
+@media screen and (width > 1300px) {
+
+    /* body styles */
+
+    body {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+
+    /* nav styles */
+
+    nav {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    img[src="images/Logo.png"] {
+        width: 300px;
+        margin: 15px 0 15px -3px;
+    }
+
+    #headerButtons {
+        margin-left: -3px;
+    }
+
+    #headerButtons li a {
+        font-size: 1.2em;
+    }
+
+    /* main styles */
+
+    main {
+        max-width: 90%;
+        margin-top: 13px;
+        justify-content: center;
+    }
+
+    #about img,
+    #contact img {
+        margin: 20px 0;
+    }
+
+    /* gallery */
+
+    .gallery {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+}
