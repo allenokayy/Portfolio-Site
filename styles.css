@@ -253,20 +253,22 @@ h2 {
 
 /* contact button */
 
-#contact button {
+#email {
     color: var(--pink);
     background-color: var(--white);
     border: 3px black solid;
     font-weight: bold;
     font-size: 1.2em;
+    text-decoration: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: all 0.2s;
     display: block;
     margin: 0 auto;
+    width: 105px;
 }
 
-#contact button:hover {
+#email:hover {
     background-color: var(--pink);
     color: var(--white);
 }
@@ -446,7 +448,7 @@ footer {
 
     /* idk man what bunnton is this again  */
 
-    #contact button {
+    #email {
         color: var(--pink);
         background-color: var(--white);
         border: 3px black solid;
