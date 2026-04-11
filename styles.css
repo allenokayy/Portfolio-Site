@@ -359,8 +359,8 @@ footer {
     display: none;
 }
 
-.projCon {
-    display: none;
+.portfolio .active {
+    display: block;
 } */
 
 
@@ -635,6 +635,10 @@ footer {
         width: 200px;
     }
 
+    #frontB img {
+        max-width: 200px;
+    }
+
     /* footer styles */
 
     footer {
@@ -772,6 +776,10 @@ footer {
     
     #taafiFront img {
         width: 250px;
+    }
+
+      #frontB img {
+        max-width: 280px;
     }
 
     /* footer styles */
