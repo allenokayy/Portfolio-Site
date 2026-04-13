@@ -309,15 +309,19 @@ h4 {
 /* gallery styles */
 
 .gallery {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
     justify-items: center;
     align-items: center;
+    scrollbar-color: var(--pink) white;
+    padding: 10px;
 }
 
-#TAAFI img {
+
+.gallery img {
     border: 3px solid black;
+}
+
+.scroll{
+    margin: -10px 0 10px 35px;
 }
 
 
@@ -475,6 +479,14 @@ footer {
         flex-direction: column;
     }
 
+    h4 {
+        margin-bottom: 0;
+    }
+
+    .scroll {
+        display: none;
+    }
+
     .gallery figure {
         width: 90%;
         padding: 10px;
@@ -615,7 +627,16 @@ footer {
     }
 
     .gallery {
-        grid-gap: 10px;
+        grid-gap: 20px;
+        margin: 0 auto;
+        display: flex;
+        overflow: auto hidden;
+        width: 90%;
+        border: 3px solid black;
+    }
+
+    .scroll {
+        display: block;
     }
 
     figure {
@@ -628,11 +649,11 @@ footer {
     }
 
     .gallery img {
-        width: 250px;
+        width: 400px;
     }
 
     #taafiFront img {
-        width: 200px;
+        width: 250px;
     }
 
     #frontB img {
@@ -758,7 +779,12 @@ footer {
     }
 
     .gallery {
-        grid-gap: 10px;
+        grid-gap: 20px;
+        margin: 0 auto;
+        display: flex;
+        overflow: auto hidden;
+        width: 90%;
+        border: 3px solid black;
     }
 
     figure {
@@ -836,11 +862,8 @@ footer {
 
     /* gallery */
 
-    .gallery {
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-        justify-items: center;
-        align-items: center;
+    .scroll {
+        display: none;
     }
 
     .gallery img {
